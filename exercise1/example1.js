@@ -1,13 +1,18 @@
-// Find the sum of all odd numbers
-
-// const arr = [1,2,3,4,5,6,7,8,9,0];
-
-// const func1 = arr.reduce(sumOfOddNum, 0)
-// const sumOfOddNum = (array) => {}
-
-const numbers= [1,2,3,4,5,6,7,8,9,11,12,13,15,18,48];
+// reduce function to work as for loop
+const numbers= [1,2,3,4,5,6,7,8,9];
 const sumReducer = (initialValue,currentValue) => initialValue + currentValue;
 
-const sum = numbers.reduce(sumReducer,0);
+const sum = numbers.reduce(sumReducer,1);
 
 console.log('Sum of array elements'+ sum);
+
+
+// for loop to sum all the numbers
+var preval = 1;
+var sumOfNum = 0;
+for(let i=0; i<numbers.length; i++){
+    sumOfNum = preval + numbers[i];
+    preval = sumOfNum;
+}
+
+console.log(sumOfNum);
